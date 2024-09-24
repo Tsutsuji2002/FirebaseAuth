@@ -16,29 +16,29 @@ const Button = ({ onPress, title, type = 'primary' }) => {
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 25,
+    borderRadius: 30,
     padding: 15,
     alignItems: 'center',
     marginVertical: 10,
+    elevation: 5, // Thêm đổ bóng
   },
   primaryButton: {
-    backgroundColor: '#4A90E2',
+    backgroundColor: '#3B5998',
   },
   secondaryButton: {
-    backgroundColor: 'transparent',
-    borderWidth: 1,
-    borderColor: '#4A90E2',
-  },
-  text: {
-    fontSize: 16,
-    fontWeight: 'bold',
+    backgroundColor: '#FFFFFF',
+    borderWidth: 2,
+    borderColor: '#3B5998',
   },
   primaryText: {
     color: '#FFFFFF',
+    fontWeight: 'bold',
   },
   secondaryText: {
-    color: '#4A90E2',
+    color: '#3B5998',
+    fontWeight: 'bold',
   },
 });
+
 
 export default Button;

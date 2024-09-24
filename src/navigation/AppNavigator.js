@@ -13,7 +13,7 @@ const AppNavigator = () => {
   const { user, loading } = useAuth();
 
   if (loading) {
-    return null; // or a loading screen
+    return null;
   }
 
   return (
@@ -21,13 +21,13 @@ const AppNavigator = () => {
       <Stack.Navigator>
         {user ? (
           <>
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Profile" component={ProfileScreen} />
+            <Stack.Screen name="Trang chủ" component={HomeScreen} />
+            <Stack.Screen name="Hồ sơ" component={ProfileScreen} />
           </>
         ) : (
           <>
-            <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
-            <Stack.Screen name="Signup" component={SignupScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="Đăng nhập" component={LoginScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="Đăng ký" component={SignupScreen} options={{ headerShown: false }} />
           </>
         )}
       </Stack.Navigator>

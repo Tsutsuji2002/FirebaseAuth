@@ -8,11 +8,11 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome, {user?.email}!</Text>
-      <Text style={styles.subtitle}>You've successfully logged in.</Text>
+      <Text style={styles.welcome}>Xin chào, {user?.email}!</Text>
+      <Text style={styles.subtitle}>Bạn đã đăng nhập thành công.</Text>
       <Button 
-        title="Go to Profile" 
-        onPress={() => navigation.navigate('Profile')}
+        title="Đi đến Hồ sơ" 
+        onPress={() => navigation.navigate('Hồ sơ')}
       />
     </View>
   );
@@ -24,20 +24,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#F0F4F8',
   },
   welcome: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
+    color: '#3B5998',
   },
   subtitle: {
     fontSize: 16,
     marginBottom: 20,
     textAlign: 'center',
-    color: '#666',
+    color: '#7D7D7D',
   },
 });
+
 
 export default HomeScreen;

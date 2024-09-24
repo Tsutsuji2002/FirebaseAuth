@@ -17,7 +17,7 @@ const SignupScreen = ({ navigation }) => {
 
   const handleSignup = async () => {
     if (password !== confirmPassword) {
-      setError("Passwords don't match");
+      setError("Mật khẩu không khớp");
       return;
     }
     try {
@@ -33,7 +33,7 @@ const SignupScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Sign Up</Text>
+      <Text style={styles.title}>Đăng ký</Text>
       <Input
         placeholder="Email"
         value={email}
@@ -41,21 +41,21 @@ const SignupScreen = ({ navigation }) => {
         keyboardType="email-address"
       />
       <Input
-        placeholder="Password"
+        placeholder="Mật khẩu"
         value={password}
         onChangeText={setPassword}
         secureTextEntry
       />
       <Input
-        placeholder="Confirm Password"
+        placeholder="Xác nhận mật khẩu"
         value={confirmPassword}
         onChangeText={setConfirmPassword}
         secureTextEntry
       />
-      <Button title="Sign Up" onPress={handleSignup} />
+      <Button title="Đăng ký" onPress={handleSignup} />
       <Button
-        title="Already have an account? Login"
-        onPress={() => navigation.navigate('Login')}
+        title="Đã có tài khoản? Đăng nhập"
+        onPress={() => navigation.navigate('Đăng nhập')}
         type="secondary"
       />
       {error ? <ErrorMessage error={error} /> : null}
@@ -68,14 +68,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#F0F4F8',
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: '#3B5998',
   },
 });
+
 
 export default SignupScreen;
